@@ -1,7 +1,0 @@
-@keyframes glow {
-	0% { color: var(--h-color-1); border-color: var(--h-color-4); }
-	25% { color: var(--h-color-2); border-color: var(--h-color-3); }
-	50% { color: var(--h-color-3); border-color: var(--h-color-2); }
-	75% { color: var(--h-color-4); border-color: var(--h-color-1); }
-	100% { color: var(--h-color-1); border-color: var(--h-color-4); }
-}

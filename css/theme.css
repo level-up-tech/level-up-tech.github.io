@@ -5,19 +5,135 @@ html, body {
 	padding: 0;
 }
 
-body { 
-	background: black;
-	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-	display: flex;
+body, body > output, main > section {
+	flex-flow: column nowrap;
 }
 
+body { 
+	display: flex;
+	background: var(--bg-main);
+	font-family: 'quicksand', sans-serif;
+}
+
+body > output {
+	position: fixed;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: flex-end;
+	animation: mega-zoom 1s linear 3s;
+	animation-fill-mode: forwards;
+}
+
+output > section, main > section {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+output > section {
+	flex: .6;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-self: flex-end;
+}
+
+output > section > div {
+	height: var(--pad-size);
+	width: var(--pad-size);
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: center;
+	transform: rotate(45deg);
+	counter-increment: grp;
+}
+
+output > section > div:before {
+	/* content: counter(grp) " ";
+	color: white; */
+}
+
+section > div > i {
+	height: var(--btn-size);
+	width: var(--btn-size);
+	counter-increment: btn;
+	/* animation: btn-1 .5s ease-in-out calc(counter(btn)); */
+	margin: 2%;
+	border: 1px solid #020406;
+	animation-iteration-count: infinite !important;
+}
+
+section > div > i:before {
+	/* content: counter(btn) " "; */
+	/* color: white; */
+}
+
+section > div:nth-child(1) > i {
+	height: var(--btn-size);
+	width: calc(var(--btn-size) * .72);
+	border-radius: 12%;
+	margin: 0 5%;
+}
+
+section > div:nth-child(1) > i:nth-child(2), 
+section > div:nth-child(1) > i:nth-child(3) {
+	transform: rotate(45deg);
+}
+section > div:nth-child(1) > i:nth-child(1), 
+section > div:nth-child(1) > i:nth-child(4) {
+	transform: rotate(-45deg);
+}
+
+section > div:nth-child(2) > i { border-radius: 50%; }
+
+
+
+section > div:nth-child(1) > i:nth-child(4) { animation: btn-2 2.4s linear calc(var(--xr) * 1) }
+section > div:nth-child(1) > i:nth-child(3) { animation: btn-3 2.4s linear calc(var(--xr) * 2) }
+section > div:nth-child(1) > i:nth-child(1) { animation: btn-1 2.4s linear calc(var(--xr) * 3) }
+section > div:nth-child(1) > i:nth-child(2) { animation: btn-4 2.4s linear calc(var(--xr) * 4) }
+section > div:nth-child(2) > i:nth-child(3) { animation: btn-1 2.4s linear calc(var(--xr) * 5) }
+section > div:nth-child(2) > i:nth-child(1) { animation: btn-2 2.4s linear calc(var(--xr) * 8) }
+section > div:nth-child(2) > i:nth-child(4) { animation: btn-3 2.4s linear calc(var(--xr) * 7) }
+section > div:nth-child(2) > i:nth-child(2) { animation: btn-4 2.4s linear calc(var(--xr) * 6) }
+
+main > section { height: 80vh; }
+
+main > section > div { flex: .3; }
+
+/* output > section:nth-child(1) {
+	flex-flow: column nowrap;
+	align-items: center;
+}
+
+output > section:nth-child(1) {
+	flex-flow: row nowrap;
+	align-items: space-evenly;
+} */
+
 h1 {
-	margin: 40% auto;
-	font-size: 72px;
-	height: 67px;
-	font-weight: 100;
-	text-shadow: 4px 4px 1px #113c6d;
-	text-align: center;
-	border-bottom: 4px solid #000;
-	animation: glow 4s both infinite;
+	/* background: url(/images/level-up-01.svg); */
+	/* font-size: 72px;
+	font-weight: 200;
+	text-align: center; */
+	/* border-bottom: 4px solid #000; */
+	animation: glow 6s both infinite;
+}
+
+section > svg path {
+	stroke: #020406;
+	fill: none;
+	animation-fill-mode: forwards !important;
+}
+
+section > svg path:nth-child(1) { animation: level-1 1.6s ease-in calc(var(--xl) * 1); }
+section > svg path:nth-child(2) { animation: level-2 1.6s ease-in calc(var(--xl) * 2); }
+section > svg path:nth-child(3) { animation: level-3 1.6s ease-in calc(var(--xl) * 3); }
+section > svg path:nth-child(4) { animation: level-4 1.6s ease-in calc(var(--xl) * 4); }
+section > svg path:nth-child(5) { animation: level-5 1.6s ease-in calc(var(--xl) * 5); }
+section > svg path:nth-child(6),
+section > svg path:nth-child(7) {
+	/* stroke: var(--h-color-1); */
+	animation: level-up 2s linear calc(var(--xl) * 6);
+
 }

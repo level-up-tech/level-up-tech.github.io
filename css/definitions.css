@@ -1,6 +1,39 @@
+@font-face {
+	src: url('/fonts/quicksand-light.ttf');
+	font-family: 'quicksand';
+	font-weight: 300;
+}
+
+@font-face {
+	src: url('/fonts/quicksand-light.ttf');
+	font-family: 'quicksand';
+	font-weight: 200;
+}
+
 :root {
 	--h-color-1: #f0f0f0;
 	--h-color-2: #d0f0f0;
 	--h-color-3: #f0d0f0;
 	--h-color-4: #f0f0d0;
+	
+	--shadow-color-1: #f0f0f050;
+	--shadow-color-2: #d0f0f050;
+	--shadow-color-3: #f0d0f050;
+	--shadow-color-4: #f0f0d050;
+
+	--btn-0: #020406;
+	--btn-1: #f0a0a0;
+	--btn-2: #a0f0a0;
+	--btn-3: #a0a0f0;
+	--btn-4: #f0a0f0;
+
+	--bg-root: #141824;
+	--bg-fade: #060812;
+	--bg-main: linear-gradient(36deg, var(--bg-root), var(--bg-fade));
+
+	--pad-size: 18vh;
+	--btn-size: 7vh;
+
+	--xr: .2s;
+	--xl: .3s;
 }
