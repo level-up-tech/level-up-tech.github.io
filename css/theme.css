@@ -21,7 +21,7 @@ body > output {
 	width: 100vw;
 	display: flex;
 	justify-content: flex-end;
-	animation: mega-zoom 1s linear 3s;
+	animation: mega-pan 1s ease-in 3s, fade-out 1s linear 4s;
 	animation-fill-mode: forwards;
 }
 
@@ -48,24 +48,13 @@ output > section > div {
 	counter-increment: grp;
 }
 
-output > section > div:before {
-	/* content: counter(grp) " ";
-	color: white; */
-}
-
 section > div > i {
 	height: var(--btn-size);
 	width: var(--btn-size);
 	counter-increment: btn;
-	/* animation: btn-1 .5s ease-in-out calc(counter(btn)); */
 	margin: 2%;
 	border: 1px solid #020406;
 	animation-iteration-count: infinite !important;
-}
-
-section > div > i:before {
-	/* content: counter(btn) " "; */
-	/* color: white; */
 }
 
 section > div:nth-child(1) > i {
@@ -86,39 +75,17 @@ section > div:nth-child(1) > i:nth-child(4) {
 
 section > div:nth-child(2) > i { border-radius: 50%; }
 
-
-
 section > div:nth-child(1) > i:nth-child(4) { animation: btn-2 2.4s linear calc(var(--xr) * 1) }
 section > div:nth-child(1) > i:nth-child(3) { animation: btn-3 2.4s linear calc(var(--xr) * 2) }
 section > div:nth-child(1) > i:nth-child(1) { animation: btn-1 2.4s linear calc(var(--xr) * 3) }
 section > div:nth-child(1) > i:nth-child(2) { animation: btn-4 2.4s linear calc(var(--xr) * 4) }
-section > div:nth-child(2) > i:nth-child(3) { animation: btn-1 2.4s linear calc(var(--xr) * 5) }
-section > div:nth-child(2) > i:nth-child(1) { animation: btn-2 2.4s linear calc(var(--xr) * 8) }
-section > div:nth-child(2) > i:nth-child(4) { animation: btn-3 2.4s linear calc(var(--xr) * 7) }
-section > div:nth-child(2) > i:nth-child(2) { animation: btn-4 2.4s linear calc(var(--xr) * 6) }
+section > div:nth-child(2) > i:nth-child(3) { animation: btn-1 1.8s linear calc(var(--xr) * 5) }
+section > div:nth-child(2) > i:nth-child(1) { animation: btn-2 1.8s linear calc(var(--xr) * 8) }
+section > div:nth-child(2) > i:nth-child(4) { animation: btn-3 1.8s linear calc(var(--xr) * 7) }
+section > div:nth-child(2) > i:nth-child(2) { animation: btn-4 1.8s linear calc(var(--xr) * 6) }
 
 main > section { height: 80vh; }
-
 main > section > div { flex: .3; }
-
-/* output > section:nth-child(1) {
-	flex-flow: column nowrap;
-	align-items: center;
-}
-
-output > section:nth-child(1) {
-	flex-flow: row nowrap;
-	align-items: space-evenly;
-} */
-
-h1 {
-	/* background: url(/images/level-up-01.svg); */
-	/* font-size: 72px;
-	font-weight: 200;
-	text-align: center; */
-	/* border-bottom: 4px solid #000; */
-	animation: glow 6s both infinite;
-}
 
 section > svg path {
 	stroke: #020406;
@@ -126,14 +93,16 @@ section > svg path {
 	animation-fill-mode: forwards !important;
 }
 
-section > svg path:nth-child(1) { animation: level-1 1.6s ease-in calc(var(--xl) * 1); }
-section > svg path:nth-child(2) { animation: level-2 1.6s ease-in calc(var(--xl) * 2); }
-section > svg path:nth-child(3) { animation: level-3 1.6s ease-in calc(var(--xl) * 3); }
-section > svg path:nth-child(4) { animation: level-4 1.6s ease-in calc(var(--xl) * 4); }
-section > svg path:nth-child(5) { animation: level-5 1.6s ease-in calc(var(--xl) * 5); }
-section > svg path:nth-child(6),
+section > svg path:nth-child(1) { animation: level-1 1.8s ease-in calc(var(--xl) * 1); }
+section > svg path:nth-child(2) { animation: level-2 1.8s ease-in calc(var(--xl) * 2); }
+section > svg path:nth-child(3) { animation: level-3 1.8s ease-in calc(var(--xl) * 3); }
+section > svg path:nth-child(4) { animation: level-4 1.8s ease-in calc(var(--xl) * 4); }
+section > svg path:nth-child(5) { animation: level-5 1.8s ease-in calc(var(--xl) * 5); }
+section > svg path:nth-child(6) {
+	transform-origin: center 45%;
+	animation: level-up 1.4s linear calc(var(--xl) * 6.4), level-up-u 1.8s linear calc(var(--xl) * 6.2);
+}
 section > svg path:nth-child(7) {
-	/* stroke: var(--h-color-1); */
-	animation: level-up 2s linear calc(var(--xl) * 6);
-
+	transform-origin: center 55%;
+	animation: level-up 1.4s linear calc(var(--xl) * 6.8), level-up-p 1.8s linear calc(var(--xl) * 7.2);
 }

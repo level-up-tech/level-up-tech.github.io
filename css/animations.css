@@ -52,41 +52,73 @@
 
 @keyframes level-1 {
 	0% { stroke: var(--btn-0); }
-	100% { stroke: var(--h-color-1); }
+	100% { stroke: var(--btn-1); }
 }
 
 @keyframes level-2 {
 	0% { stroke: var(--btn-0); }
-	100% { stroke: var(--btn-1); }
+	100% { stroke: var(--btn-2); }
 }
 
 @keyframes level-3 {
 	0% { stroke: var(--btn-0); }
-	100% { stroke: var(--btn-2); }
+	100% { stroke: var(--btn-3); }
 }
 
 @keyframes level-4 {
 	0% { stroke: var(--btn-0); }
-	100% { stroke: var(--btn-3); }
+	100% { stroke: var(--btn-4); }
 }
 
 @keyframes level-5 {
 	0% { stroke: var(--btn-0); }
-	100% { stroke: var(--btn-4); }
+	100% { stroke: var(--btn-1); }
 }
 
 @keyframes level-up {
-	0% { 
-		stroke: var(--btn-0);
-		transform: translate3d(100%, 0%, 0%);
-	}
-	100% {
-		stroke: var(--btn-1);
-		transform: translate3d(100%, 100%, 50%);
-	}
+	0% { transform: rotateX(90deg); }
+	100% { transform: initial; }
 }
 
-@keyframes mega-zoom {
+@keyframes level-up-u {
+	0% { stroke: var(--btn-0); }
+	100% { stroke: var(--btn-2); }
+}
+
+@keyframes level-up-p {
+	0% { stroke: var(--btn-0); }
+	100% { stroke: var(--btn-3); }
+}
+
+/* @keyframes level-up-pan {
+	0% { transform: rotateX(90deg); }
+	100% { transform: initial; }
+} */
+
+/* @keyframes level-up-p {
+	0% { transform: scaleX(0); }
+	100% { transform: initial; }
+} */
+
+@keyframes mega-pan {
 	0% { transform: initial; }
-	100% { transform: rotateY(90deg) translateZ(1em) }
+	100% { transform: rotateY(90deg) translateZ(2em) }
+}
+
+@keyframes blink-out {
+
+}
+
+@keyframes fade-out {
+	0% {
+		visibility: visible;
+		opacity: initial;
+	}
+	99% {
+		visibility: visible;
+	}
+	100% { 
+		visibility: hidden;
+		opacity: 0;
+	}
 }

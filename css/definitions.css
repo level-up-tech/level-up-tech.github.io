@@ -22,18 +22,18 @@
 	--shadow-color-4: #f0f0d050;
 
 	--btn-0: #020406;
-	--btn-1: #f0a0a0;
-	--btn-2: #a0f0a0;
-	--btn-3: #a0a0f0;
+	--btn-1: #ffa0a0;
+	--btn-2: #60d060;
+	--btn-3: #a0a0ff;
 	--btn-4: #f0a0f0;
 
 	--bg-root: #141824;
-	--bg-fade: #060812;
+	--bg-fade: #040608;
 	--bg-main: linear-gradient(36deg, var(--bg-root), var(--bg-fade));
 
 	--pad-size: 18vh;
 	--btn-size: 7vh;
 
 	--xr: .2s;
-	--xl: .3s;
+	--xl: .4s;
 }
