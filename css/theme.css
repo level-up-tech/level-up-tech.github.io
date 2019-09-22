@@ -5,15 +5,17 @@ html, body {
 	padding: 0;
 }
 
-body, body > output, main > section {
-	flex-flow: column nowrap;
-}
+body, body > output, main > section { flex-flow: column nowrap; }
 
 body { 
-	display: flex;
+	/* display: flex; */
+	/* position: fixed; */
 	background: var(--bg-main);
 	font-family: 'quicksand', sans-serif;
+	overflow: hidden;
 }
+
+main { overflow-y: scroll; height: 100%; }
 
 body > output {
 	position: fixed;
@@ -21,7 +23,7 @@ body > output {
 	width: 100vw;
 	display: flex;
 	justify-content: flex-end;
-	animation: mega-pan 1s ease-in 3s, fade-out 1s linear 4s;
+	animation: mega-pan 1s ease-in 3.6s, fade-out 1s linear 4.2s;
 	animation-fill-mode: forwards;
 }
 
@@ -35,6 +37,10 @@ output > section {
 	flex-flow: row nowrap;
 	align-items: center;
 	justify-self: flex-end;
+}
+
+main > section {
+	position: relative;
 }
 
 output > section > div {
@@ -84,9 +90,10 @@ section > div:nth-child(2) > i:nth-child(1) { animation: btn-2 1.8s linear calc(
 section > div:nth-child(2) > i:nth-child(4) { animation: btn-3 1.8s linear calc(var(--xr) * 7) }
 section > div:nth-child(2) > i:nth-child(2) { animation: btn-4 1.8s linear calc(var(--xr) * 6) }
 
-main > section { height: 80vh; }
+main > section { height: 96vh; }
 main > section > div { flex: .3; }
 
+section > svg { flex: 1; }
 section > svg path {
 	stroke: #020406;
 	fill: none;
@@ -105,4 +112,195 @@ section > svg path:nth-child(6) {
 section > svg path:nth-child(7) {
 	transform-origin: center 55%;
 	animation: level-up 1.4s linear calc(var(--xl) * 6.8), level-up-p 1.8s linear calc(var(--xl) * 7.2);
+}
+
+main > section::before, main > section::after {
+	color: transparent;
+	content: 'V';
+	transform: scale(4.8, 1.2);
+	transform-origin: bottom left;
+	position: absolute;
+	left: 2.6%;
+	animation: chevron-guide 2.4s linear infinite;
+}
+
+main > section::before {
+	animation-delay: 5s;
+	bottom: 4.6%;
+}
+
+main > section::after {
+	animation-delay: 5.4s;
+	bottom: 3%;
+}
+
+main > section:nth-of-type(2)::before { animation-delay: 5.4s; }
+main > section:nth-of-type(2)::after { animation-delay: 5.8s; }
+
+main > section:nth-of-type(2) {
+	background: var(--bg-1);
+}
+
+h1 {
+	margin: 0;
+	flex: .3;
+	opacity: 0;
+	text-align: center;
+	animation: fade-in 2s linear 3s forwards;
+	/* , text-pan 4s linear 5s infinite; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+h1 > span {
+	/* flex: 0; */
+	font-size: 2em;
+	color: #d0e0f0;
+	display: inline-block;
+	opacity: 0;
+	height: 0;
+	width: 0;
+	animation: text-flip calc(var(--pan-speed) * 6) linear infinite;
+}
+
+h1 > span:nth-child(1) { animation-delay: calc(var(--pan-speed) * 1); }
+h1 > span:nth-child(2) { animation-delay: calc(var(--pan-speed) * 2); }
+h1 > span:nth-child(3) { animation-delay: calc(var(--pan-speed) * 3); }
+h1 > span:nth-child(4) { animation-delay: calc(var(--pan-speed) * 4); }
+h1 > span:nth-child(5) { animation-delay: calc(var(--pan-speed) * 5); }
+h1 > span:nth-child(6) { animation-delay: calc(var(--pan-speed) * 6); }
+/* h1 > span > div:nth-child(7) { animation-delay: calc(var(--pan-speed) * 7); } */
+
+h1 > span > em { display: inline; font-style: normal; vertical-align: center; }
+
+h1 > span:nth-child(1) > em { color: var(--btn-1); }
+h1 > span:nth-child(2) > em { color: var(--btn-2); }
+h1 > span:nth-child(3) > em { color: var(--btn-3); }
+h1 > span:nth-child(4) > em { color: var(--btn-4); }
+h1 > span:nth-child(5) > em { color: var(--btn-3); }
+h1 > span:nth-child(6) > em { color: var(--btn-2); }
+
+h1 > span:nth-child(1) > em:not(:first-child):not(:last-child) { color: var(--btn-2); }
+h1 > span:nth-child(2) > em:not(:first-child):not(:last-child) { color: var(--btn-3); }
+h1 > span:nth-child(3) > em:not(:first-child):not(:last-child) { color: var(--btn-4); }
+h1 > span:nth-child(4) > em:not(:first-child):not(:last-child) { color: var(--btn-3); }
+h1 > span:nth-child(5) > em:not(:first-child):not(:last-child) { color: var(--btn-2); }
+h1 > span:nth-child(6) > em:not(:first-child):not(:last-child) { color: var(--btn-1); }
+
+h1 + div {
+	opacity: 0;
+	flex: .3;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	color: var(--btn-4); 
+	border-color: var(--btn-1);
+	animation: fade-in 3s linear 3s forwards;
+}
+
+a[href='#getstarted'] {
+	color: transparent;
+	border: 1px solid transparent;
+	font-size: 1.4em;
+	line-height: 2em;
+	padding: 0 4%;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 4px;
+	animation: get-started calc(var(--pan-speed) * 6) linear infinite 5.2s;
+}
+
+section > ul {
+	flex: .86;
+	margin: 0 auto;
+	padding: 0;
+	height: 100%;
+	width: 80%;
+	list-style-type: none;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-evenly;
+}
+
+section > ul > li {
+	flex: .26;
+	display: flex;
+	flex-flow: row nowrap;
+	border-bottom: 1px solid #f0a0f0;
+}
+
+section > ul > li:nth-child(1) { animation: border-glow 6.2s ease-in-out infinite 5s; }
+section > ul > li:nth-child(2) { animation: border-glow 6.5s ease-in-out infinite 5s; }
+section > ul > li:nth-child(3) { animation: border-glow 6.7s ease-in-out infinite 5s; }
+
+section > ul > li > div {
+	flex: .4;
+	/* border: 1px solid #00ffff; */
+}
+
+section > ul > li > span {
+	flex: .5;
+	text-align: center;
+	vertical-align: middle;
+	margin: auto;
+	font-size: 1.4em;
+	height: 30%;
+	color: #d0e0f0;
+
+}
+
+section > ul > li > svg { 
+	flex: .3;
+	height: 90%; 
+}
+
+section > ul > li > svg path,
+section > ul > li > svg line,
+section > ul > li > svg rect,
+section > ul > li > svg polygon,
+section > ul > li > svg ellipse {
+	stroke: #204060;
+	fill: none;
+}
+
+section > ul > li:nth-child(1) > svg path,
+section > ul > li:nth-child(2) > svg line,
+section > ul > li:nth-child(3) > svg polygon { animation: vector-1 4.2s linear infinite 4.2s; }
+
+section > ul > li:nth-child(1) > svg line,
+section > ul > li:nth-child(2) > svg rect,
+section > ul > li:nth-child(3) > svg line { animation: vector-2 4.7s linear infinite 4.7s; }
+
+section > ul > li:nth-child(2) > svg path,
+section > ul > li:nth-child(3) > svg rect { animation: vector-3 5.2s linear infinite 5.2s; }
+
+section > ul > li:nth-child(2) > svg ellipse,
+section > ul > li:nth-child(3) > svg line + rect { animation: vector-4 5.4s linear infinite 5.4s; }
+
+
+/* section > ul > li:nth-child(1) > svg path,
+section > ul > li:nth-child(1) > svg rect { animation: vector-1 3s ease-in-out infinite; }
+section > ul > li:nth-child(2) > svg path,
+section > ul > li:nth-child(2) > svg rect { animation: vector-2 3s ease-in-out infinite; }
+section > ul > li:nth-child(3) > svg path,
+section > ul > li:nth-child(3) > svg rect { animation: vector-3 3s ease-in-out infinite; }
+
+section > ul > li:nth-child(1) > svg line,
+section > ul > li:nth-child(1) > svg polygon { animation: v-line-1 4s ease-in-out infinite; }
+section > ul > li:nth-child(2) > svg line,
+section > ul > li:nth-child(2) > svg polygon { animation: v-line-2 4s ease-in-out infinite; }
+section > ul > li:nth-child(3) > svg line,
+section > ul > li:nth-child(3) > svg polygon { animation: v-line-3 4s ease-in-out infinite; } */
+
+section:nth-of-type(3) {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+section:nth-of-type(3) > div {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: stretch;
+	border: 1px solid #a0a000;
 }

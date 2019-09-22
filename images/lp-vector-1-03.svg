@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <title>lp-vector-1</title>
+  <g id="art-3">
+    <rect class="cls-1" x="22.5" y="24.5" width="117" height="195"/>
+    <line class="cls-1" x1="34" y1="36.5" x2="59" y2="36.5"/>
+    <line class="cls-1" x1="34" y1="46.5" x2="59" y2="46.5"/>
+    <line class="cls-1" x1="34" y1="56.5" x2="59" y2="56.5"/>
+    <rect class="cls-1" x="34.5" y="85.5" width="44" height="44"/>
+    <line class="cls-1" x1="90.5" y1="85.5" x2="127.5" y2="85.5"/>
+    <line class="cls-1" x1="91" y1="100.5" x2="128" y2="100.5"/>
+    <line class="cls-1" x1="91" y1="129.5" x2="128" y2="129.5"/>
+    <line class="cls-1" x1="34" y1="143.5" x2="128" y2="143.5"/>
+    <line class="cls-1" x1="91" y1="115.5" x2="128" y2="115.5"/>
+    <rect class="cls-1" x="34.5" y="176.13" width="94" height="30.74"/>
+    <polygon class="cls-1" points="119.06 35.5 106.94 35.5 100.88 46 106.94 56.5 119.06 56.5 125.12 46 119.06 35.5"/>
+    <path class="cls-2" d="M215,25v82H164V25h51m1-1H163v84h53V24Z"/>
+    <path class="cls-2" d="M215,135v82H164V135h51m1-1H163v84h53V134Z"/>
+    <line class="cls-1" x1="170" y1="31.5" x2="185" y2="31.5"/>
+    <line class="cls-1" x1="170" y1="37.5" x2="185" y2="37.5"/>
+    <line class="cls-1" x1="170" y1="43.5" x2="185" y2="43.5"/>
+    <line class="cls-1" x1="169" y1="141.5" x2="184" y2="141.5"/>
+    <line class="cls-1" x1="169" y1="147.5" x2="184" y2="147.5"/>
+    <line class="cls-1" x1="169" y1="153.5" x2="184" y2="153.5"/>
+    <rect class="cls-1" x="170.7" y="59.04" width="37.6" height="16.92"/>
+    <polygon class="cls-1" points="196.06 169.5 183.94 169.5 177.88 180 183.94 190.5 196.06 190.5 202.12 180 196.06 169.5"/>
+    <line class="cls-1" x1="170" y1="206.5" x2="209" y2="206.5"/>
+    <rect class="cls-1" x="170.7" y="83.04" width="37.6" height="16.92"/>
+  </g>
+</svg>

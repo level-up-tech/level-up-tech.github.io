@@ -31,9 +31,13 @@
 	--bg-fade: #040608;
 	--bg-main: linear-gradient(36deg, var(--bg-root), var(--bg-fade));
 
+	--bg-1: linear-gradient(-36deg, var(--bg-fade), var(--bg-root));
+
 	--pad-size: 18vh;
 	--btn-size: 7vh;
 
 	--xr: .2s;
 	--xl: .4s;
+
+	--pan-speed: 4s;
 }

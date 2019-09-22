@@ -122,3 +122,104 @@
 		opacity: 0;
 	}
 }
+
+@keyframes fade-in {
+	0%, 80% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes text-pan {
+	0%, 28%, 72%, 100% {
+		transform: initial;
+		opacity: 1;
+	}
+	35%, 65% {
+		opacity: 0.1;
+	}
+	40% {
+		transform: translateX(-100vw);
+		opacity: 0;
+	}
+	60% {
+		transform: translateX(100vw);
+		opacity: 0;
+	}
+}
+
+@keyframes text-flip {
+	0% {
+		opacity: 0;
+		height: auto;
+		width: auto;
+	}
+	1%, 12% { 
+		height: auto;
+		width: auto;
+		opacity: 1;
+	}
+	13% {
+		opacity: 0;
+	}
+	15%, 100% { 
+		opacity: 0; 
+		height: 0;
+		width: 0;
+	}
+}
+
+@keyframes chevron-guide {
+	0%, 100% { color: initial; }
+	40% { color: var(--btn-4); }
+	60% { color: var(--btn-3); }
+}
+
+@keyframes get-started {
+	
+	0%, 100% {
+		color: var(--btn-2); border-color: var(--btn-1);
+	}
+	17% {
+		color: var(--btn-3); border-color: var(--btn-2);
+	}
+	35% {
+		color: var(--btn-4); border-color: var(--btn-3);
+	}
+	52% {
+		color: var(--btn-3); border-color: var(--btn-4);
+	}
+	66% {
+		color: var(--btn-2); border-color: var(--btn-3);
+	}
+	80% {
+		color: var(--btn-1); border-color: var(--btn-2);
+	}
+}
+
+@keyframes vector-1 {
+	0%, 100% { stroke: var(--btn-1); }
+	50% { stroke: var(--btn-2); }
+}
+@keyframes vector-2 {
+	0%, 100% { stroke: var(--btn-2); }
+	50% { stroke: var(--btn-3); }
+}
+@keyframes vector-3 {
+	0%, 100% { stroke: var(--btn-3); }
+	50% { stroke: var(--btn-4); }
+}
+@keyframes vector-4 {
+	0%, 100% { stroke: var(--btn-4); }
+	50% { stroke: var(--btn-1); }
+}
+
+@keyframes border-glow {
+	0%, 100% { border-color: #a0b1c2; }
+	20% { border-color: var(--btn-1); }
+	40% { border-color: var(--btn-2); }
+	60% { border-color: var(--btn-3); }
+	80% { border-color: var(--btn-4); }
+}
