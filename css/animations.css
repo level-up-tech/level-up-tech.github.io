@@ -90,16 +90,6 @@
 	100% { stroke: var(--btn-3); }
 }
 
-/* @keyframes level-up-pan {
-	0% { transform: rotateX(90deg); }
-	100% { transform: initial; }
-} */
-
-/* @keyframes level-up-p {
-	0% { transform: scaleX(0); }
-	100% { transform: initial; }
-} */
-
 @keyframes mega-pan {
 	0% { transform: initial; }
 	100% { transform: rotateY(90deg) translateZ(2em) }
@@ -222,4 +212,25 @@
 	40% { border-color: var(--btn-2); }
 	60% { border-color: var(--btn-3); }
 	80% { border-color: var(--btn-4); }
+}
+
+@keyframes coin-spin {
+    0% {
+		opacity: 1;
+		transform: rotateY(0deg);
+	}
+	25% {
+		transform: scale3d(1.12, 1.12, 1.12) rotateY(90deg);
+	}
+    50% {
+		opacity: 0.6;
+		transform: rotateY(180deg);
+	}
+	75% {
+		transform: scale3d(1.12, 1.12, 1.12) rotateY(270deg);
+	}
+    100% {
+		opacity: 1;
+        transform: rotateY(360deg)
+    }
 }

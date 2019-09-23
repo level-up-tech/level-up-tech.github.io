@@ -1,0 +1,4 @@
+@media screen and (max-width: 800px) {
+	section > ul { width: 88%; }
+	form { width: 88%; }
+}

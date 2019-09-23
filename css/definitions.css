@@ -1,5 +1,5 @@
 @font-face {
-	src: url('/fonts/quicksand-light.ttf');
+	src: url('/fonts/quicksand-regular.ttf');
 	font-family: 'quicksand';
 	font-weight: 300;
 }
@@ -30,14 +30,18 @@
 	--bg-root: #141824;
 	--bg-fade: #040608;
 	--bg-main: linear-gradient(36deg, var(--bg-root), var(--bg-fade));
-
 	--bg-1: linear-gradient(-36deg, var(--bg-fade), var(--bg-root));
 
 	--pad-size: 18vh;
 	--btn-size: 7vh;
 
 	--xr: .2s;
-	--xl: .4s;
+	--xl: .34s;
 
 	--pan-speed: 4s;
+
+	--brand-twitter: #1DA1F2;
+    --brand-facebook: #3B5998;
+    --brand-linkedin: #0077B5;
+    --brand-github: #181717;
 }
