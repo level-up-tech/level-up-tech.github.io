@@ -3,7 +3,7 @@ let ContactForm = {
 
     // url: "https://innovation-contact.herokuapp.com/submit-contact-form",
 
-    url: window.location.href.startsWith('file://') 
+    url: window.location.href.startsWith('http://localhost') 
         ? "http://localhost:3000/submit-contact-form"
         : "https://innovation-contact.herokuapp.com/submit-contact-form",
 
@@ -16,8 +16,11 @@ let ContactForm = {
         ContactForm.fields = {
             name: ContactForm.form.querySelector('input[name="name"]'),
             email: ContactForm.form.querySelector('input[name="email"]'),
-            services: ContactForm.form.querySelectorAll('input[type="checkbox"]'),
-            message: ContactForm.form.querySelector('textarea')
+            phone: ContactForm.form.querySelector('input[name="phone"]'),
+            company: ContactForm.form.querySelector('input[name="company"]'),
+            description: ContactForm.form.querySelector('textarea'),
+            budget: ContactForm.form.querySelector('select[name="budget"]'),
+            estimate: ContactForm.form.querySelector('select[name="estimate"]')
         }
 
         ContactForm.form.querySelector('button').onclick = ContactForm.submit
@@ -28,15 +31,11 @@ let ContactForm = {
         var data = {
             name: ContactForm.fields.name.value,
             email: ContactForm.fields.email.value,
-            services: [
-                ContactForm.fields.services[0].checked,
-                ContactForm.fields.services[1].checked,
-                ContactForm.fields.services[2].checked,
-                ContactForm.fields.services[3].checked,
-                ContactForm.fields.services[4].checked,
-                ContactForm.fields.services[5].checked,
-            ],
-            message: ContactForm.fields.message.value
+            phone: ContactForm.fields.phone.value,
+            company: ContactForm.fields.company.value,
+            description: ContactForm.fields.description.value,
+            budget: ContactForm.fields.budget.value,
+            estimate: ContactForm.fields.budget.value
         }
 
         if (!data.name) { 
@@ -63,7 +62,7 @@ let ContactForm = {
     },
 
     on_success() {
-        window.location.href = "contact-success.html"
+        alert('Thank you for submitting your request. We typically respond within one business day. Thanks again!')
     }
 }
 
