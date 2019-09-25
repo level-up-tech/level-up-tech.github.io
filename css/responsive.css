@@ -1,4 +1,9 @@
 @media screen and (max-width: 800px) {
+
+	h1 > span { font-size: 1em; }
 	section > ul { width: 88%; }
+	section > ul > li > span { flex: .6; font-size: 1.2em; }
+	section > a > h2 { font-size: .84em; }
 	form { width: 88%; }
+	footer > div { width: 80vw; }
 }
