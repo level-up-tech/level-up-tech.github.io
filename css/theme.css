@@ -291,7 +291,7 @@ section > ul > li:nth-child(3) > svg line + rect { animation: vector-4 5.4s line
 section:nth-of-type(3) {
 	display: grid;
 	grid-template-columns: 30% 30% 30%;
-	padding: 0 2% 8% 2%;
+	padding: 0 1% 8% 1%;
 	justify-content: center;
 }
 
@@ -303,14 +303,14 @@ section > a {
 	justify-content: center;
 	/* border: 1px solid #a0a000; */
 	color: #f2f1f2;
-	margin: 0 2%;
+	margin: 2% 6%;
 }
 
 section > a > h2 {
 	font-size: 1em;
 }
 section > a > img {
-	max-width: 90%;
+	max-width: 100%;
 	position: relative;
 	transition-duration: .2s;
 }
