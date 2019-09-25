@@ -382,7 +382,7 @@ footer {
 	flex-flow: column;
 	align-items: center;
 	justify-content: space-evenly;
-	border-top: 1px solid #241208;
+	border-top: 1px solid #321623;
 	/* animation: border-glow 6s linear infinite 5s; */
 }
 
@@ -399,7 +399,7 @@ footer > div:nth-child(3) {
 }
 
 footer a, footer div, footer span, footer em { 
-	color: #ffb0c0;
+	color: #9995af;
 }
 
 footer a:not(.social):hover {
