@@ -93,7 +93,7 @@ section > div:nth-child(2) > i:nth-child(1) { animation: btn-2 1.8s linear calc(
 section > div:nth-child(2) > i:nth-child(4) { animation: btn-3 1.8s linear calc(var(--xr) * 7) }
 section > div:nth-child(2) > i:nth-child(2) { animation: btn-4 1.8s linear calc(var(--xr) * 6) }
 
-section > svg { flex: 1; }
+section > svg { flex: .6; }
 section > svg path {
 	stroke: #020406;
 	fill: none;
@@ -251,19 +251,17 @@ section > ul > li > div {
 }
 
 section > ul > li > span {
-	flex: .5;
+	flex: .6;
 	text-align: center;
 	vertical-align: middle;
 	margin: 0 auto;
-	font-size: 1.4em;
-	height: 30%;
+	font-size: 1.6em;
+	font-weight: 100;
+	height: 32%;
 	color: #d0e0f0;
 }
 
-section > ul > li > svg { 
-	flex: .3;
-	height: 90%; 
-}
+section > ul > li > svg { flex: .14; }
 
 section > ul > li > svg path,
 section > ul > li > svg line,
